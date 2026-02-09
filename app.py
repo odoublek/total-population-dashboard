@@ -3,6 +3,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter, MaxNLocator
 import plotly.express as px
+from pathlib import Path
 
 # --------------------
 # Page config
@@ -10,7 +11,9 @@ import plotly.express as px
 st.set_page_config(page_title="Toplam Nüfus Panosu", layout="wide")
 st.title("🌍 Toplam Nüfus Panosu (1960–2024)")
 
-file_path = r"C:\Users\Ozgur\Desktop\coding\dataanaliz\totalpopulation\totalpopulation.xls"
+BASE_DIR = Path(__file__).parent
+file_path = BASE_DIR / "totalpopulation.xls"
+
 
 # --------------------
 # Load data
